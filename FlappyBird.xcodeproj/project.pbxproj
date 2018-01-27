@@ -13,6 +13,8 @@
 		227F5F022011BD9A00C13A1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 227F5F012011BD9A00C13A1F /* Assets.xcassets */; };
 		227F5F052011BD9A00C13A1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227F5F032011BD9A00C13A1F /* LaunchScreen.storyboard */; };
 		227F5F0F2011C39C00C13A1F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F5F0E2011C39C00C13A1F /* GameScene.swift */; };
+		22D616E6201AC1BA000637CD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D616E5201AC1BA000637CD /* AVFoundation.framework */; };
+		22D616E8201AC277000637CD /* decision1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22D616E7201AC277000637CD /* decision1.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		227F5F042011BD9A00C13A1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		227F5F062011BD9A00C13A1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		227F5F0E2011C39C00C13A1F /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		22D616E5201AC1BA000637CD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		22D616E7201AC277000637CD /* decision1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = decision1.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22D616E6201AC1BA000637CD /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,7 @@
 			children = (
 				227F5EF92011BD9A00C13A1F /* FlappyBird */,
 				227F5EF82011BD9A00C13A1F /* Products */,
+				22D616E4201AC1BA000637CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +69,17 @@
 				227F5F032011BD9A00C13A1F /* LaunchScreen.storyboard */,
 				227F5F062011BD9A00C13A1F /* Info.plist */,
 				227F5F0E2011C39C00C13A1F /* GameScene.swift */,
+				22D616E7201AC277000637CD /* decision1.mp3 */,
 			);
 			path = FlappyBird;
+			sourceTree = "<group>";
+		};
+		22D616E4201AC1BA000637CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22D616E5201AC1BA000637CD /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +143,7 @@
 			files = (
 				227F5F052011BD9A00C13A1F /* LaunchScreen.storyboard in Resources */,
 				227F5F022011BD9A00C13A1F /* Assets.xcassets in Resources */,
+				22D616E8201AC277000637CD /* decision1.mp3 in Resources */,
 				227F5F002011BD9A00C13A1F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

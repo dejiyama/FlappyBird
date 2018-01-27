@@ -7,11 +7,27 @@
 //
 import UIKit
 import SpriteKit
+import AVFoundation
+
+var audioPlayerInstance : AVAudioPlayer?  // 再生するサウンドのインスタンス
+
 
 class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //サウンドファイルのパスを生成
+        let suoundFilePah = Bundle.main.path(forResource: "decision1", ofType: "mp3")!
+        let sound:URL = URL(fileURLWithPath: suoundFilePah)
+        // AVAudioPlayerのインスタンスを作成
+        do {
+            audioPlayerInstance = try AVAudioPlayer(contentsOf: sound, fileTypeHint:nil)
+        } catch {
+            print("インスタンス作成失敗")
+        }
+        //バッファに保持していつでも再生できるようにする。
+        audioPlayerInstance?.prepareToPlay()
         
         // SKViewに型を変換する
         let skView = self.view as! SKView
@@ -27,10 +43,19 @@ class ViewController: UIViewController {
         
         // ビューにシーンを表示する
         skView.presentScene(scene)
-    }
+        
+        skView.showsPhysics = true
+        }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // ステータスバーを消すーーーここからーーー
+    override var prefersStatusBarHidden: Bool {
+        get {
+            return true
+        }
+    }  // ーーーここまで追加ーーー
 }
